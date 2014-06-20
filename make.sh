@@ -38,7 +38,7 @@ bash python/install.sh
 ###############################################################################
 dir=~/.dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old              # old dotfiles backup directory
-files="vimrc oh-my-zsh zshrc gitignore"    # list of files/folders to symlink in homedir
+files="vimrc vim oh-my-zsh zshrc gitignore"    # list of files/folders to symlink in homedir
 
 
 ###############################################################################
@@ -67,6 +67,9 @@ for file in $files; do
         mv ~/.$file ~/dotfiles_old/
     fi
     # echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
+    if [ -e "$dir/$file" ]
+    then
+        ln -s $dir/$file ~/.$file
+    fi
 done
 

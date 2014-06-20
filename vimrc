@@ -1,3 +1,139 @@
+" Combination of these setting plus others 
+" http://amix.dk/vim/vimrc.html
+" https://github.com/jaysw/dotfiles/blob/master/vimrc
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" get rid of Vi compatibility mode. SET FIRST!
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible          
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => https://github.com/tpope/vim-pathogen
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+execute pathogen#infect()
+execute pathogen#helptags()
+syntax on
+" filetype [ON] plugin [ON] ident [ON]
+filetype plugin indent on
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VIM user interface
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set 7 lines to the cursor - when moving vertically using j/k
+set so=7
+
+" Turn on the WiLd menu
+set wildmenu
+
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+
+"Always show current position
+set ruler
+
+" When searching try to be smart about cases 
+set smartcase
+
+" Highlight search results
+set hlsearch
+
+" Makes search act like search in modern browsers
+set incsearch
+
+" Set line numbers
+set number
+
+" Highlight search results
+set hlsearch
+
+" Don't redraw while executing macros (good performance config)
+set lazyredraw
+
+" Show matching brackets when text indicator is over them
+set showmatch
+
+" highlight the line where the cursor is at for my poor eyes
+set cursorline
+hi CursorLine term=NONE cterm=NONE guibg=Grey40
+
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors and Fonts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable syntax highlighting
+syntax enable
+colorscheme desert        " set colorscheme
+
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+" enable 256-color mode.
+set t_Co=256              
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+" highlights line if chars over 80
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use spaces instead of tabs
+set expandtab
+
+" Be smart when using tabs ;)
+set smarttab
+
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+
+" always indent/outdent to the nearest tabstop
+set shiftround            
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Editing mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Remap VIM 0 to first non-blank character
+map 0 ^
+
+" Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
+" nmap <M-j> mz:m+<cr>`z
+" nmap <M-k> mz:m-2<cr>`z
+" vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+" vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+
+if has("mac") || has("macunix")
+  nmap <D-j> <M-j>
+  nmap <D-k> <M-k>
+  vmap <D-j> <M-j>
+  vmap <D-k> <M-k>
+endif
+
+" Delete trailing white space on save, useful for Python and CoffeeScript ;)
+func! DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
+autocmd BufWrite *.py :call DeleteTrailingWS()
+autocmd BufWrite *.coffee :call DeleteTrailingWS()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Moving around, tabs, windows and buffers
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Treat long lines as break lines (useful when moving around in them)
+map j gj
+map k gk
+
 " unmap arrow keys ftw
 no <down> <Nop>
 no <left> <Nop>
@@ -9,21 +145,3 @@ ino <left> <Nop>
 ino <right> <Nop>
 ino <up> <Nop>
 
-set nocompatible          " get rid of Vi compatibility mode. SET FIRST!
-filetype plugin indent on " filetype detection[ON] plugin[ON] indent[ON]
-set t_Co=256              " enable 256-color mode.
-syntax enable             " enable syntax highlighting (previously syntax on).
-colorscheme desert        " set colorscheme
-set number                " show line numbers
-set laststatus=2          " last window always has a statusline
-filetype indent on        " activates indenting for files
-set nohlsearch            " Don't continue to highlight searched phrases.
-set incsearch             " But do highlight as you type your search.
-set ignorecase            " Make searches case-insensitive.
-set ruler                 " Always show info along bottom.
-set autoindent            " auto-indent
-set tabstop=4             " tab spacing
-set softtabstop=4         " unify
-set shiftwidth=4          " indent/outdent by 4 columns
-set shiftround            " always indent/outdent to the nearest tabstop
-set expandtab             " use spaces instead of tabs
