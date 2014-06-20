@@ -1,0 +1,33 @@
+TODO, FIXME
+You need administrator access to run this tool... exiting!
+Warning: Idle sleep timings for "Battery Power" may not behave as expected.
+- Display sleep should have a lower timeout than system sleep.
+Warning: Idle sleep timings for "Battery Power" may not behave as expected.
+- Display sleep should have a lower timeout than system sleep.
+Set: Entry, ":FK_StandardViewSettings:IconViewSettings:arrangeBy", Does Not Exist
+2014-06-20 21:16:08.363 defaults[2257:507]
+The domain/default pair of (/Users/mlopes/Library/Preferences/com.apple.terminal, Default Window Settings) does not exist
+Done. Note that some of these changes require a logout/restart to take effect.
+Creating /Users/mlopes/dotfiles_old for backup of any existing dotfiles in ~
+...done
+Changing to the /Users/mlopes/.dotfiles directory
+...done
+Moving any existing dotfiles from ~ to /Users/mlopes/dotfiles_old
+mv: rename /Users/mlopes/.bashrc to /Users/mlopes/dotfiles_old/.bashrc: No such file or directory
+Creating symlink to bashrc in home directory.
+Moving any existing dotfiles from ~ to /Users/mlopes/dotfiles_old
+mv: rename /Users/mlopes/.vimrc to /Users/mlopes/dotfiles_old/.vimrc: No such file or directory
+Creating symlink to vimrc in home directory.
+Moving any existing dotfiles from ~ to /Users/mlopes/dotfiles_old
+mv: rename /Users/mlopes/.vim to /Users/mlopes/dotfiles_old/.vim: No such file or directory
+Creating symlink to vim in home directory.
+Moving any existing dotfiles from ~ to /Users/mlopes/dotfiles_old
+mv: rename /Users/mlopes/.zshrc to /Users/mlopes/dotfiles_old/.zshrc: No such file or directory
+Creating symlink to zshrc in home directory.
+Moving any existing dotfiles from ~ to /Users/mlopes/dotfiles_old
+mv: rename /Users/mlopes/.oh-my-zsh to /Users/mlopes/dotfiles_old/.oh-my-zsh: No such file or directory
+Creating symlink to oh-my-zsh in home directory.
+Moving any existing dotfiles from ~ to /Users/mlopes/dotfiles_old
+mv: rename /Users/mlopes/.gitignore to /Users/mlopes/dotfiles_old/.gitignore: No such file or directory
+Creating symlink to gitignore in home directory.
+mabildev:.dotfiles mlopes$
