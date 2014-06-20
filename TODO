@@ -1,4 +1,8 @@
 TODO, FIXME
+
+put a flag around osx so it does only if it is an initial settup
+
+
 You need administrator access to run this tool... exiting!
 Warning: Idle sleep timings for "Battery Power" may not behave as expected.
 - Display sleep should have a lower timeout than system sleep.

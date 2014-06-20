@@ -1,5 +1,31 @@
-*.class
-*.pyc
-.DS_Store
+# os things
 .Spotlight-V100
 .Trashes
+.DS_Store
+
+# catags
+tags
+
+# java things
+.project
+.settings
+.classpath
+.checkstyle
+target/
+fmt.tld
+webapp/.settings
+webapp/target-eclipse
+*.iml
+target-eclipse/
+.settings/
+
+# python things
+*.pyc
+*.egg-info
+
+# temp file:
+*~
+*.swp
+
+# other things
+*.orig
