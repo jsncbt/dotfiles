@@ -54,9 +54,17 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# HomeBrew Path
 HOMEBREWPATH="/usr/local/bin"
 
-export PATH="$HOMEBREWPATH:/usr/bin:/bin:/usr/sbin:/sbin"
+# Set Grails Home
+GRAILS_HOME_223=/opt/grails-2.2.3
+GRAILS_HOME=/opt/grails-2.4.1
+
+# SETUP PATH
+export PATH="$HOMEBREWPATH:/usr/bin:/bin:/usr/sbin:/sbin:$GRAILS_HOME/bin:$GRAILS_HOME_223/bin"
+
+# Man path
 export MANPATH="/usr/local/share/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -85,3 +93,15 @@ export GIT_PS1_SHOWDIRTYSTATE=true
 source /usr/local/bin/virtualenvwrapper.sh
 # export PYTHONPATH=$PYTHONPATH:$HOME/pylib
 export WORKON_HOME=~/workspace/python/environments
+
+# Display todo when a new shell is opened, and configure alias
+alias diary="vi $HOME/.diary.log"
+
+# Display todo when a new shell is opened, and configure alias
+alias etodo="vi $HOME/.todo"
+alias todo="cat $HOME/.todo"
+if [ -f "$HOME/.todo" ]; then cat $HOME/.todo; fi
+
+function ssh-copy-key {
+    cat ~/.ssh/id_rsa.pub | ssh $1 "cat - >> ~/.ssh/authorized_keys"
+}
