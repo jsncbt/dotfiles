@@ -3,9 +3,22 @@
 " https://github.com/jaysw/dotfiles/blob/master/vimrc
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" get rid of Vi compatibility mode. SET FIRST!
+" Basic Setup
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" get rid of Vi compatibility mode. SET FIRST!
 set nocompatible          
+
+" http://lists.alioth.debian.org/pipermail/pkg-vim-maintainers/2007-June/004020.html
+set modelines=0
+
+" Map the leader key to comma
+let mapleader=","
+
+" Use semicolon as colon
+nnoremap ; :
+
+" Esc shall be jj
+inoremap jj <ESC>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => https://github.com/tpope/vim-pathogen
@@ -20,7 +33,7 @@ filetype plugin indent on
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set 7 lines to the cursor - when moving vertically using j/k
-set so=7
+set so=10
 
 " Turn on the WiLd menu
 set wildmenu
@@ -42,9 +55,13 @@ set incsearch
 
 " Set line numbers
 set number
+set relativenumber
 
 " Highlight search results
 set hlsearch
+
+" Clear search results on leader
+nnoremap <leader><space> :noh<cr>
 
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
@@ -62,6 +79,9 @@ set novisualbell
 set t_vb=
 set tm=500
 
+" Set visual characters, Textmate like
+" set list
+" set listchars=tab:▸\ ,eol:¬
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -132,6 +152,9 @@ autocmd BufWrite *.coffee :call DeleteTrailingWS()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tab for moving bracket pairs
+nnoremap <tab> %
+vnoremap <tab> %
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
@@ -147,3 +170,10 @@ ino <left> <Nop>
 ino <right> <Nop>
 ino <up> <Nop>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Search
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" fix Vim’s horribly broken default regex “handling” by automatically
+" inserting a \v before any string you search for.
+" nnoremap / /\v
+" vnoremap / /\v
