@@ -54,9 +54,18 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# HomeBrew Path
 HOMEBREWPATH="/usr/local/bin"
 
-export PATH="$HOMEBREWPATH:/usr/bin:/bin:/usr/sbin:/sbin"
+# Set Grails Home
+GRAILS_HOME_223=/opt/grails-2.2.3
+
+
+
+export PATH="$HOMEBREWPATH:/usr/bin:/bin:/usr/sbin:/sbin:$GRAILS_HOME_223/bin"
+
+
+# Man path
 export MANPATH="/usr/local/share/man:$MANPATH"
 
 # You may need to manually set your language environment
