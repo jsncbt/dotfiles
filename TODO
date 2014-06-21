@@ -1,7 +1,8 @@
 TODO, FIXME
 
 put a flag around osx so it does only if it is an initial settup
-
+add alias sourcing
+add git aliases/configuration
 
 You need administrator access to run this tool... exiting!
 Warning: Idle sleep timings for "Battery Power" may not behave as expected.

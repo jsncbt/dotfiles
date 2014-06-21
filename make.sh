@@ -27,6 +27,10 @@ mv ~/.zshrc ~/.dotfiles/zshrc
 # python stuff
 bash python/install.sh
 
+# brew
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+brew doctor
+
 ###############################################################################
 # set os defaults 
 ###############################################################################
