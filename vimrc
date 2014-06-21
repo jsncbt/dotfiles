@@ -177,3 +177,10 @@ ino <up> <Nop>
 " inserting a \v before any string you search for.
 " nnoremap / /\v
 " vnoremap / /\v
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Pathogen is the only plugin that should be on the top
+" utilsnips
+let g:UltiSnipsSnippetDirectories=["utilsnips", "mysnipets"]

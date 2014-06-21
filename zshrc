@@ -57,7 +57,7 @@ source $ZSH/oh-my-zsh.sh
 HOMEBREWPATH="/usr/local/bin"
 
 export PATH="$HOMEBREWPATH:/usr/bin:/bin:/usr/sbin:/sbin"
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/local/share/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

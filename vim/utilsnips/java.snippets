@@ -1,0 +1,33 @@
+snippet tcc "test case"
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+ 
+public class ${1:`!p snip.rv = snip.basename or "untitled"`} {
+    @Before
+    public void setup() {
+        
+    }
+ 
+    @Test
+    public void test${2:Name}() throws Exception {
+        $0
+    }
+ 
+    @After
+    public void tearDown() {
+        
+    }
+}
+endsnippet
+
+snippet nm "new method"
+public ${1:void} ${2:Name}(${3}) {
+    ${0}	
+}
+endsnippet
+
+
+snippet sysout "System out"
+System.out.println("${1:HelloWorld!}");
+endsnippet
