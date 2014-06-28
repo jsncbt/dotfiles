@@ -79,6 +79,9 @@ set novisualbell
 set t_vb=
 set tm=500
 
+" show the current mode
+set showmode
+
 " Set visual characters, Textmate like
 " set list
 " set listchars=tab:▸\ ,eol:¬
@@ -179,8 +182,21 @@ ino <up> <Nop>
 " vnoremap / /\v
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Diary, Log
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" <F2> - Insert a new log entry
+" strftime insertion from
+" http://vim.wikia.com/wiki/Insert_current_date_or_time
+nnoremap <F2> Go<NL><NL><Esc>i@<Esc>"=strftime("\%a \%d/\%m/\%Y \%I:\%M \%p")<CR>po*
+" Custom highlighting of dates in log files. Adapted from
+" http://stackoverflow.com/questions/4167425/custom-syntax-highlighting-in-vim
+au BufRead,BufNewFile *.log hi logheader guifg=navy ctermfg=blue term=bold cterm=bold gui=bold
+" Matches lines starting with @ and ending in M (see log entry format below)
+au BufRead,BufNewFile *.log syn match logheader /^@.*M$/
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Pathogen is the only plugin that should be on the top
-" utilsnips
-let g:UltiSnipsSnippetDirectories=["utilsnips", "mysnipets"]
+" Plugins are found under .vim/config/pluginname.vim
+
+runtime! config/**/*.vim
