@@ -95,14 +95,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 # export PYTHONPATH=$PYTHONPATH:$HOME/pylib
 export WORKON_HOME=~/workspace/python/environments
 
-# Display todo when a new shell is opened, and configure alias
-alias diary="vi $HOME/.diary.log"
+# Source other usefull stuff, alias, functions
 
-# Display todo when a new shell is opened, and configure alias
-alias etodo="vi $HOME/.todo"
-alias todo="cat $HOME/.todo"
-if [ -f "$HOME/.todo" ]; then cat $HOME/.todo; fi
-
-function ssh-copy-key {
-    cat ~/.ssh/id_rsa.pub | ssh $1 "cat - >> ~/.ssh/authorized_keys"
-}
+source .aliases

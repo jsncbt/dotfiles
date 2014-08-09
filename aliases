@@ -1,0 +1,9 @@
+# Display todo when a new shell is opened, and configure alias
+alias diary="vi $HOME/.diary.log"
+
+# Display todo when a new shell is opened, and configure alias
+alias etodo="vi $HOME/.todo"
+alias todo="cat $HOME/.todo"
+if [ -f "$HOME/.todo" ]; then cat $HOME/.todo; fi
+
+alias ll='ls -all'

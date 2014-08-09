@@ -1,0 +1,5 @@
+# copy ssh key to remote server
+function ssh-copy-key {
+    cat ~/.ssh/id_rsa.pub | ssh $1 "cat - >> ~/.ssh/authorized_keys"
+}
+
