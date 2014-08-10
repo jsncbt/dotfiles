@@ -18,7 +18,7 @@ let mapleader=","
 nnoremap ; :
 
 " Esc shall be jj
-inoremap jj <ESC>
+inoremap jk <ESC>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => https://github.com/tpope/vim-pathogen
