@@ -158,6 +158,17 @@ snip.rv = snip.basename or "untitled"` {
 }
 endsnippet
 
+snippet clc "class and main method" b
+public class `!p
+snip.rv = snip.basename or "untitled"` {
+
+	public static void main(String[] args) {
+		$0
+	}
+
+}
+endsnippet
+
 snippet cl "class" b
 public class ${1:`!p
 snip.rv = snip.basename or "untitled"`} {
