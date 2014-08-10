@@ -14,8 +14,10 @@ nnoremap <leader>jg :JavaGetSet<CR>
 nnoremap <leader>jh :JavaHierarchy<CR>
 nnoremap <leader>jri :JavaImpl<CR>
 nnoremap <leader>jd :JavaDelegate<CR>
-nnoremap <leader>ji :JavaImport<CR>
-nnoremap <leader>jmi :JavaImportMissing<CR>
+nnoremap <leader>jii :JavaImport<CR>
+nnoremap <leader>ji :JavaImportOrganize<CR>
 nnoremap <leader>jr :JavaRename<CR>
 nnoremap <leader>jf :JavaFormat<CR>
 nnoremap <leader>jx :Java<CR>
+nnoremap <leader>ps :ProjectSettings<CR>
+nnoremap <leader>pr :ProjectRefresh<CR>

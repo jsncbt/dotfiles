@@ -103,9 +103,10 @@ set t_Co=256
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
+" this is set on the filetype plugin for python only
 " highlights line if chars over 80
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+" highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+" match OverLength /\%81v.\+/
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
