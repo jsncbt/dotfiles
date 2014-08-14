@@ -97,4 +97,4 @@ export WORKON_HOME=~/workspace/python/environments
 
 # Source other usefull stuff, alias, functions
 
-source .aliases
+source ~/.aliases

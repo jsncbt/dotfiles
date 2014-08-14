@@ -20,6 +20,9 @@ nnoremap ; :
 " Esc shall be jj
 inoremap jk <ESC>
 
+" show intermediate commands
+set showcmd
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => https://github.com/tpope/vim-pathogen
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
