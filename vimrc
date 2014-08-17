@@ -23,6 +23,9 @@ inoremap jk <ESC>
 " show intermediate commands
 set showcmd
 
+" Allow to change buffers withouth saving them, will just prompt at the end
+set hidden
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => https://github.com/tpope/vim-pathogen
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
