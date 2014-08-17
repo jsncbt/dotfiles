@@ -95,3 +95,7 @@ export GIT_PS1_SHOWDIRTYSTATE=true
 # Source other usefull stuff, alias, functions
 
 source ~/.aliases
+
+source /usr/local/bin/virtualenvwrapper.sh
+# export PYTHONPATH=:/Users/marcos/pylib
+export WORKON_HOME=~/workspace/python/environments
