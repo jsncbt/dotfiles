@@ -2,8 +2,8 @@
 	excludesfile = /Users/mlopes/.gitignore
 	editor = /usr/bin/vim
 [user]
-	name = Marcos Lopes
-	email = marcos.lopes@wotifgroup.com
+	name = Marcos Antonio Lopes
+	email = marcos.abil@gmail.com
 [alias]
 	ci = commit
 	st = status
@@ -11,9 +11,3 @@
 	br = branch
 [push]
 	default = simple
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
