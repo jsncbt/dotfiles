@@ -160,6 +160,8 @@ autocmd BufWrite *.coffee :call DeleteTrailingWS()
 vnoremap < <gv
 vnoremap > >gv
 
+" Toggle paste
+nmap <leader>p :set paste!<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
