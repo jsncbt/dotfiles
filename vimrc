@@ -23,6 +23,9 @@ inoremap jk <ESC>
 " show intermediate commands
 set showcmd
 
+" allow registers to be used with clipboard
+set clipboard=unnamed
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => https://github.com/tpope/vim-pathogen
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
