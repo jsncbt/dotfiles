@@ -60,9 +60,12 @@ HOMEBREWPATH="/usr/local/bin"
 
 # Set Grails Home
 GRAILS_HOME_223=/opt/grails-2.2.3
-GRAILS_HOME=/opt/grails-2.4.1
+GRAILS_HOME=/opt/grails-2.4.0
 
-# SETUP PATH
+# Increase Maven heap
+export MAVEN_OPTS=-Xmx512m
+
+# Setup path
 export PATH="$HOMEBREWPATH:/usr/bin:/bin:/usr/sbin:/sbin:$GRAILS_HOME/bin:$GRAILS_HOME_223/bin"
 
 # Man path
