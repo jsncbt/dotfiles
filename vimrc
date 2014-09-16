@@ -168,9 +168,13 @@ nmap <leader>p :set paste!<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set mouse for scrolling
+set mouse=a 
+
 " Tab for moving bracket pairs
 nnoremap <tab> %
 vnoremap <tab> %
+
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
