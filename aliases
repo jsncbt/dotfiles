@@ -7,3 +7,7 @@ alias todo="cat $HOME/.todo"
 if [ -f "$HOME/.todo" ]; then cat $HOME/.todo; fi
 
 alias ll='ls -all'
+
+alias gdc='git diff --cached'
+alias gcv='git ci -v'
+alias gca='git ci -v --amend'

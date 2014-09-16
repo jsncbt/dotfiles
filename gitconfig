@@ -3,7 +3,7 @@
 	editor = /usr/bin/vim
 [user]
 	name = Marcos Antonio Lopes
-	email = marcos.abil@gmail.com
+	email = marcos.lopes@wotifgroup.com
 [alias]
 	ci = commit
 	st = status
