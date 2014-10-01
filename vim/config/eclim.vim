@@ -1,5 +1,6 @@
 "let g:EclimTaglistEnabled=0 " use default Taglist instead of Eclim
 "let g:taglisttoo_disabled=1 ” maybe of the same use of the above command
+let g:EclimMavenPomClasspathUpdate = 0
 let g:EclimProjectTreeAutoOpen=0 " open Eclipse project tree automatically
 let g:EclimProjectTreeExpandPathOnOpen=1
 let g:EclimProjectTreeSharedInstance=1 " share tree instance through all tabs
@@ -8,6 +9,7 @@ let g:EclimProjectTreeActions = [ {'pattern': '.*', 'name': 'Tab', 'action': 'ta
 
 "for Eclim java cmd
 nnoremap <leader>js :JavaSearch<CR>
+nnoremap <leader>jc :JavaCorrect<CR>
 nnoremap <leader>jgs :JavaSet<CR>
 nnoremap <leader>jgg :JavaGet<CR>
 nnoremap <leader>jg :JavaGetSet<CR>

@@ -1,5 +1,16 @@
 # copy ssh key to remote server
-function ssh-copy-key {
+function ssh-copy-key { 
     cat ~/.ssh/id_rsa.pub | ssh $1 "mkdir /home/mlopes/.ssh/; cat - >> ~/.ssh/authorized_keys"
 }
 
+function toggle-maven-settings {
+    FILE=~/.m2/settings.xml
+    FILE_BKP=~/.m2/settings_wotif.xml
+
+    if [ -e $FILE ]; then
+        mv $FILE $FILE_BKP
+    elif [ -e $FILE_BKP ]; then
+        mv $FILE_BKP $FILE
+    fi
+
+}

@@ -26,6 +26,8 @@ set showcmd
 " allow registers to be used with clipboard
 set clipboard=unnamed
 
+" Yank consistent with C D S
+nnoremap Y y$
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => https://github.com/tpope/vim-pathogen
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -87,6 +89,12 @@ set tm=500
 
 " show the current mode
 set showmode
+
+" set nobackup
+" set noswapfile
+
+" set all swap files to be in 
+set directory=~/.vim/swap
 
 " Set visual characters, Textmate like
 " set list
