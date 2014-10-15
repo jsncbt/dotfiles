@@ -28,3 +28,9 @@
 [submodule "vim/bundle/vimfugitive"]
 	path = vim/bundle/vimfugitive
 	url = git://github.com/tpope/vim-fugitive.git
+[submodule "vim/bundle/emmet"]
+	path = vim/bundle/emmet
+	url = http://github.com/mattn/emmet-vim.git
+[submodule "vim/bundle/ack"]
+	path = vim/bundle/ack
+	url = https://github.com/mileszs/ack.vim.git
