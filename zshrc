@@ -58,6 +58,9 @@ source $ZSH/oh-my-zsh.sh
 # HomeBrew Path
 HOMEBREWPATH="/usr/local/bin"
 
+# Set Java Home
+JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home"
+
 # Set Grails Home
 GRAILS_HOME_223=/opt/grails-2.2.3
 GRAILS_HOME_222=/opt/grails-2.2.2
@@ -67,7 +70,7 @@ GRAILS_HOME=/opt/grails-2.4.0
 export MAVEN_OPTS=-Xmx512m
 
 # Setup path
-export PATH="$HOMEBREWPATH:/usr/bin:/bin:/usr/sbin:/sbin:$GRAILS_HOME/bin:$GRAILS_HOME_222/bin:$GRAILS_HOME_223/bin"
+export PATH="$HOMEBREWPATH:/usr/bin:/bin:/usr/sbin:/sbin:$JAVA_HOME/bin:$GRAILS_HOME/bin:$GRAILS_HOME_222/bin:$GRAILS_HOME_223/bin"
 
 # Man path
 export MANPATH="/usr/local/share/man:$MANPATH"
