@@ -40,3 +40,6 @@
 [submodule "vim/bundle/jedivim"]
 	path = vim/bundle/jedivim
 	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
