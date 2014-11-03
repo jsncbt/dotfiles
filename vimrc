@@ -225,3 +225,6 @@ au BufRead,BufNewFile *.log syn match logheader /^@.*M$/
 " Plugins are found under .vim/config/pluginname.vim
 
 runtime! config/**/*.vim
+
+" sets history after everything else 
+set history=10000

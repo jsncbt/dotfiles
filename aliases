@@ -4,6 +4,8 @@ alias diary="vi $HOME/.diary.log"
 # Display todo when a new shell is opened, and configure alias
 alias etodo="vi $HOME/.todo"
 alias todo="cat $HOME/.todo"
+#
+# move this away from here, does it looks like an alias to you
 if [ -f "$HOME/.todo" ]; then cat $HOME/.todo; fi
 
 alias ll='ls -all'
@@ -11,3 +13,5 @@ alias ll='ls -all'
 alias gdc='git diff --cached'
 alias gcv='git ci -v'
 alias gca='git ci -v --amend'
+
+alias sketch="vim $HOME/.sketch"

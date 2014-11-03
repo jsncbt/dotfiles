@@ -72,6 +72,9 @@ export MAVEN_OPTS=-Xmx512m
 # Setup path
 export PATH="$HOMEBREWPATH:/usr/bin:/bin:/usr/sbin:/sbin:$JAVA_HOME/bin:$GRAILS_HOME/bin:$GRAILS_HOME_222/bin:$GRAILS_HOME_223/bin"
 
+# Add my own bin
+export PATH="$PATH:$HOME/.bin"
+
 # Man path
 export MANPATH="/usr/local/share/man:$MANPATH"
 

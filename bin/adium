@@ -1,0 +1,60 @@
+#!/bin/sh
+#
+####################################
+# Adium Command Line 
+# https://trac.adium.im/wiki/AppleScript_Support_1.2
+####################################
+
+showHelp () {
+    echo "-----------------------------";
+    echo "Adium Command Line Interface";
+    echo "-----------------------------";
+    echo "Usage: `basename $0` <option>";
+    echo;
+    echo "Options:";
+    echo " get        = Get contacts statuses.";
+    echo " set status = Set status to 'status'.";
+    echo " quit       = Quit Adium.";
+}
+
+if [ $# = 0 ]; then
+    showHelp;
+fi
+
+while [ $# -gt 0 ]; do
+    arg=$1;
+    case $arg in
+        "set" ) 
+            osascript -e "tell application \"Adium\" to go available with message \"${2}\""
+            if [ $? != 0 ]; then
+                echo "Error changing your status";
+            fi
+            break ;;
+
+        "get" ) 
+            contacts=`osascript -e 'tell application "Adium" to get the name of every contact whose status type is not offline and status type is not away'`;
+            if [ $? != 0 ]; then
+                echo "Error getting contacts statuses";
+            fi
+
+            #for contact in "${contacts[@]}"
+            for contact in $(echo $contacts | tr "," "\n")
+            do
+                name=`osascript -e "tell application \"Adium\" to get the display name of every contact whose name is \"$contact\""`
+                status=`osascript -e "tell application \"Adium\" to get the status message of every contact whose name is \"$contact\""`
+                if [ ! -z "$status" ]; then
+                    # printf "%-50s %s\n" $name [UP]
+                    echo "$name - $status"
+                fi
+            done
+            break ;;
+
+        "quit"    ) echo "Quitting Adium";
+            osascript -e 'tell application "Adium" to quit';
+            exit 1 ;;
+
+        "help" | * ) echo "help:";
+            showHelp;
+            break ;;
+    esac
+done
