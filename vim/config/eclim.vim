@@ -4,11 +4,15 @@ let g:EclimMavenPomClasspathUpdate = 0
 let g:EclimProjectTreeAutoOpen=0 " open Eclipse project tree automatically
 let g:EclimProjectTreeExpandPathOnOpen=1
 let g:EclimProjectTreeSharedInstance=1 " share tree instance through all tabs
+
+let g:EclimJavaSearchSingleResult='edit'
+
 " use tabnew instead of split for new action
 let g:EclimProjectTreeActions = [ {'pattern': '.*', 'name': 'Tab', 'action': 'tabnew'} ]
 
 "for Eclim java cmd
 nnoremap <leader>js :JavaSearch<CR>
+nnoremap <leader>jv :JavaSearchContext<CR>
 nnoremap <leader>jc :JavaCorrect<CR>
 nnoremap <leader>jgs :JavaSet<CR>
 nnoremap <leader>jgg :JavaGet<CR>

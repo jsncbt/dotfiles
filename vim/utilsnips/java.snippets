@@ -417,7 +417,13 @@ synchronized $0
 endsnippet
 
 snippet tc "test case"
-public class ${1:`!p snip.rv = snip.basename or "untitled"`} extends ${2:TestCase}`!p nl(snip)`{
+package ${2:Package};
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class ${1:`!p snip.rv = snip.basename or "untitled"`} {
 	$0
 }
 endsnippet
