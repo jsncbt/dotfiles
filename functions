@@ -5,12 +5,15 @@ function ssh-copy-key {
 
 function toggle-maven-settings {
     FILE=~/.m2/settings.xml
-    FILE_BKP=~/.m2/settings_wotif.xml
+    FILE_PERSONAL=~/.m2/settings_personal.xml
+    FILE_WOTIF=~/.m2/settings_wotif.xml
 
-    if [ -e $FILE ]; then
-        mv $FILE $FILE_BKP
-    elif [ -e $FILE_BKP ]; then
-        mv $FILE_BKP $FILE
+    if [ -e $FILE_PERSONAL ]; then
+        mv $FILE $FILE_WOTIF
+        mv $FILE_PERSONAL $FILE
+    elif [ -e $FILE_WOTIF ]; then
+        mv $FILE $FILE_PERSONAL
+        mv $FILE_WOTIF $FILE
     fi
 
 }
