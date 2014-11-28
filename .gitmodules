@@ -43,3 +43,6 @@
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "vim/bundle/stylus"]
+	path = vim/bundle/stylus
+	url = git://github.com/wavded/vim-stylus.git
