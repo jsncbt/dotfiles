@@ -11,9 +11,9 @@ let g:EclimJavaSearchSingleResult='edit'
 let g:EclimProjectTreeActions = [ {'pattern': '.*', 'name': 'Tab', 'action': 'tabnew'} ]
 
 "for Eclim java cmd
-nnoremap <leader>js :JavaSearch<CR>
-nnoremap <leader>jv :JavaSearchContext<CR>
-nnoremap <leader>jc :JavaCorrect<CR>
+nnoremap <leader>js :JavaSearch<CR> " [-p <pattern>] [-t <type>] [-x <context>] [-s <scope>] - Search for classes, methods, fields, etc. (With pattern supplied, searches for the element under the cursor).
+nnoremap <leader>jv :JavaSearchContext<CR> " Perform a context sensitive search for the element under the cursor.
+nnoremap <leader>jc :JavaCorrect<CR> " Suggest possible corrections for a source error.
 nnoremap <leader>jgs :JavaSet<CR>
 nnoremap <leader>jgg :JavaGet<CR>
 nnoremap <leader>jg :JavaGetSet<CR>
@@ -23,7 +23,7 @@ nnoremap <leader>jd :JavaDelegate<CR>
 nnoremap <leader>jii :JavaImport<CR>
 nnoremap <leader>ji :JavaImportOrganize<CR>
 nnoremap <leader>jr :JavaRename<CR>
-nnoremap <leader>jf :JavaFormat<CR>
+nnoremap <leader>jf :JavaFormat<CR> " Formats java source code.
 nnoremap <leader>jx :Java<CR>
 nnoremap <leader>ps :ProjectSettings<CR>
 nnoremap <leader>pr :ProjectRefresh<CR>
