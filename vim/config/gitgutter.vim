@@ -1,4 +1,3 @@
-" Clean solarized color schemme 
 hi clear SignColumn
 
 nmap <leader>gn :GitGutterNextHunk<CR>

@@ -59,7 +59,7 @@ source $ZSH/oh-my-zsh.sh
 HOMEBREWPATH="/usr/local/bin"
 
 # Set Java Home
-JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home"
+JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home"
 
 # Set Grails Home
 GRAILS_HOME_223=/opt/grails-2.2.3

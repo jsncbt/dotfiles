@@ -145,6 +145,9 @@ set shiftround
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
+" allow for a longer default mapping combination timeout
+set timeoutlen=2000
+
 " Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
 " nmap <M-j> mz:m+<cr>`z
 " nmap <M-k> mz:m-2<cr>`z
