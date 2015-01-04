@@ -146,7 +146,7 @@ set shiftround
 map 0 ^
 
 " allow for a longer default mapping combination timeout
-set timeoutlen=2000
+set timeoutlen=1500
 
 " Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
 " nmap <M-j> mz:m+<cr>`z
