@@ -4,6 +4,7 @@ let g:ctrlp_map = '<leader>t'
 set wildignore+=*/build/**
 set wildignore+=*/target/**
 set wildignore+=*/bin/**
+set wildignore+=*/node_modules/**
 
 " ctrl p search buffer shall be leader b
 nnoremap <leader>b :CtrlPBuffer<CR>
