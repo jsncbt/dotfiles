@@ -52,3 +52,6 @@
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "bin/vim/syntastic/tidy-html5"]
+	path = bin/vim/syntastic/tidy-html5
+	url = https://github.com/w3c/tidy-html5.git

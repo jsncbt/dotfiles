@@ -326,8 +326,14 @@ ${1:private} ${2:void} ${3:method}(${4}) ${5:throws $6 }{
 }
 endsnippet
 
-snippet m  "method" b
+snippet mp  "method" b
 ${1:private} ${2:void} ${3:method}(${4}) {
+	$0
+}
+endsnippet
+
+snippet m  "method" b
+${1:public} ${2:void} ${3:method}(${4}) {
 	$0
 }
 endsnippet
@@ -420,6 +426,8 @@ snippet tc "test case"
 package ${2:Package};
 
 import static org.junit.Assert.*;
+import static org.mockito.Matchers.*;
+import static org.mockito.Mockito.*;
 
 import org.junit.Test;
 
