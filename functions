@@ -7,13 +7,28 @@ function toggle-maven-settings {
     FILE=~/.m2/settings.xml
     FILE_PERSONAL=~/.m2/settings_personal.xml
     FILE_WOTIF=~/.m2/settings_wotif.xml
+    FILE_EXPEDIA=~/.m2/settings_expedia.xml
 
-    if [ -e $FILE_PERSONAL ]; then
+    # if there is a personal and an expedia means that the
+    # active one is wotif so we rotate to the next option expedia
+    if [ -e $FILE_PERSONAL ] && [ -e $FILE_EXPEDIA ]; then
         mv $FILE $FILE_WOTIF
-        mv $FILE_PERSONAL $FILE
-    elif [ -e $FILE_WOTIF ]; then
+        mv $FILE_EXPEDIA $FILE
+        echo "expedia active"
+
+    # if there is a wotif and an expedia means that the
+    # active one is personal so we rotate to the next option wotif
+    elif [ -e $FILE_WOTIF ] && [ -e $FILE_EXPEDIA ]; then
         mv $FILE $FILE_PERSONAL
         mv $FILE_WOTIF $FILE
+        echo "wotif active"
+
+    # if there is a wotif and a personal means that the
+    # active one is expedia so we rotate to the next option personal
+    elif [ -e $FILE_WOTIF ] && [ -e $FILE_PERSONAL ]; then
+        mv $FILE $FILE_EXPEDIA
+        mv $FILE_PERSONAL $FILE
+        echo "personal active"
     fi
 
 }

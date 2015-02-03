@@ -67,7 +67,8 @@ GRAILS_HOME_222=/opt/grails-2.2.2
 GRAILS_HOME=/opt/grails-2.4.0
 
 # Increase Maven heap
-export MAVEN_OPTS=-Xmx512m
+JREBEL_HOME="/Users/mlopes/workspace/java/jrebel-nightly/lib"
+export MAVEN_OPTS="-Xmx512m -agentpath:$JREBEL_HOME/libjrebel64.dylib -Drebel.mustache_plugin=true -Drebel.log=true"
 
 # Setup path
 export PATH="$HOMEBREWPATH:/usr/bin:/bin:/usr/sbin:/sbin:$JAVA_HOME/bin:$GRAILS_HOME/bin:$GRAILS_HOME_222/bin:$GRAILS_HOME_223/bin"

@@ -425,11 +425,13 @@ endsnippet
 snippet tc "test case"
 package ${2:Package};
 
+import static org.mockito.MockitoAnnotations.initMocks;
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.*;
 import static org.mockito.Mockito.*;
 
 import org.junit.Test;
+import org.mockito.Mock;
 
 public class ${1:`!p snip.rv = snip.basename or "untitled"`} {
 	$0
