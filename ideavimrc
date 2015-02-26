@@ -1,0 +1,16 @@
+" Esc shall be jk inoremap
+inoremap jk <Esc>
+"
+" Use semicolon as colon
+nnoremap ; :
+
+" Set 7 lines to the cursor - when moving vertically using j/k
+set so=10
+
+" Make < > shifts keep selection
+vnoremap < <gv
+vnoremap > >gv
+
+" Set line numbers
+set number
+set relativenumber
