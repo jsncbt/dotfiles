@@ -14,6 +14,8 @@ let g:EclimProjectTreeActions = [ {'pattern': '.*', 'name': 'Tab', 'action': 'ta
 nnoremap <leader>js :JavaSearch<CR> " [-p <pattern>] [-t <type>] [-x <context>] [-s <scope>] - Search for classes, methods, fields, etc. (With pattern supplied, searches for the element under the cursor).
 nnoremap <leader>jv :JavaSearchContext<CR> " Perform a context sensitive search for the element under the cursor.
 nnoremap <leader>jc :JavaCorrect<CR> " Suggest possible corrections for a source error.
+nnoremap <leader>juu :JUnit<CR> " Execute a single Test
+nnoremap <leader>jua :JUnit %<CR> " Execute all tests
 nnoremap <leader>jgs :JavaSet<CR>
 nnoremap <leader>jgg :JavaGet<CR>
 nnoremap <leader>jg :JavaGetSet<CR>
