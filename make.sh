@@ -80,4 +80,8 @@ done
 # python stuff
 bash python/install.sh
 
+###############################################################################
+# install submodules
+###############################################################################
 
+git submodule update --init --recursive
