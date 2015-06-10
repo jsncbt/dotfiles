@@ -13,9 +13,6 @@
 [submodule "vim/bundle/vimairline"]
 	path = vim/bundle/vimairline
 	url = https://github.com/bling/vim-airline
-[submodule "vim/bundle/vimcolorssolarized"]
-	path = vim/bundle/vimcolorssolarized
-	url = git://github.com/altercation/vim-colors-solarized.git
 [submodule "vim/bundle/vimrooter"]
 	path = vim/bundle/vimrooter
 	url = https://github.com/airblade/vim-rooter.git
@@ -55,3 +52,6 @@
 [submodule "bin/vim/syntastic/tidy-html5"]
 	path = bin/vim/syntastic/tidy-html5
 	url = https://github.com/w3c/tidy-html5.git
+[submodule "vim/bundle/vimcolorssolarized"]
+	path = vim/bundle/vimcolorssolarized
+	url = https://github.com/altercation/vim-colors-solarized.git
