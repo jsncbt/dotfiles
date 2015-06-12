@@ -108,8 +108,8 @@ export GIT_PS1_SHOWDIRTYSTATE=true
 source ~/.aliases
 source ~/.functions
 
-source /usr/local/bin/virtualenvwrapper.sh
+# source /usr/local/bin/virtualenvwrapper.sh
 # export PYTHONPATH=:/Users/marcos/pylib
-export WORKON_HOME=~/workspace/python/environments
+# export WORKON_HOME=~/workspace/python/environments
 unalias gm
-source ~/.wotdot/zsh/zshrc
+# source ~/.wotdot/zsh/zshrc
