@@ -2,4 +2,4 @@
 # disables main maven rc file and exports java7 for this terminal session 
 ####################################
 export MAVEN_SKIP_RC="skip" # can be any string really
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home"
