@@ -27,8 +27,8 @@ if [ $# != 0 ]; then
 fi
 
 showMessage() {
-    #osascript -e 'display dialog "Task Finished" with title "Pomodoro" & display notification "Task Finished" sound name "Submarine" with title "Pomodoro"' >> /dev/null
-    osascript -e 'display notification "Task Finished" sound name "Submarine" with title "Pomodoro"'
+    #osascript -e 'display dialog "Task Finished" with title "Pomodoro" & display notification "Task Finished" sound name "Glass" with title "Pomodoro"' >> /dev/null
+    osascript -e 'display notification "Task Finished" sound name "Glass" with title "Pomodoro"'
 }
 
 arg=$1;
