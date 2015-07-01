@@ -1,0 +1,58 @@
+#!/bin/sh
+#
+####################################
+# Pomodoro
+####################################
+
+showHelp () {
+    echo "-------------------------------";
+    echo "Pomodoro Command Line Interface";
+    echo "-------------------------------";
+    echo "Usage: `basename $0` <option>";
+    echo;
+    echo "Options:";
+    echo " <no-option>: will default to 25 minutes";
+    echo " short: will be 5 minutes";
+    echo " long: will be 15 minutes";
+    echo " longer: will be 50 minutes";
+    echo " help: show this message";
+}
+
+if [ $# != 0 ]; then
+    arg=$1;
+    if [ $arg != 'short' ] && [ $arg != 'long' ] && [ $arg != 'longer' ]; then
+        showHelp;
+        exit 1;
+    fi
+fi
+
+showMessage() {
+    #osascript -e 'display dialog "Task Finished" with title "Pomodoro" & display notification "Task Finished" sound name "Submarine" with title "Pomodoro"' >> /dev/null
+    osascript -e 'display notification "Task Finished" sound name "Submarine" with title "Pomodoro"'
+}
+
+arg=$1;
+case $arg in
+    "short" )
+        echo "Timer set to 5 minutes";
+        (sleep 300; showMessage) &
+        break ;;
+
+    "long" )
+        echo "Timer set to 15 minutes";
+        (sleep 900; showMessage) &
+        break ;;
+
+    "longer" )
+        echo "Timer set to 50 minutes";
+        (sleep 3000; showMessage) &
+        break ;;
+
+    "help" ) echo "help:";
+        showHelp;
+        break ;;
+
+    *) echo "Timer set to 25 minutes";
+        (sleep 1500; showMessage) &
+        break ;;
+esac

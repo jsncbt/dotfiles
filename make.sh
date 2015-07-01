@@ -38,7 +38,7 @@ brew doctor
 dir=~/.dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old              # old dotfiles backup directory
 files="vimrc zshrc gitconfig gitignore aliases functions eclimrc"    # list of files to symlink in homedir
-files="${files} vim oh-my-zsh"    # list of folders to symlink in homedir
+files="${files} vim oh-my-zsh bin"    # list of folders to symlink in homedir
 
 
 ###############################################################################
