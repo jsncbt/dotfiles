@@ -113,3 +113,7 @@ source ~/.functions
 # export WORKON_HOME=~/workspace/python/environments
 unalias gm
 # source ~/.wotdot/zsh/zshrc
+
+
+# set vim mode
+bindkey -v
