@@ -23,7 +23,7 @@ nnoremap <leader>jh :JavaHierarchy<CR>
 nnoremap <leader>jri :JavaImpl<CR>
 nnoremap <leader>jd :JavaDelegate<CR>
 nnoremap <leader>jii :JavaImport<CR>
-nnoremap <leader>ji :JavaImportOrganize<CR>
+nnoremap <leader>jio :JavaImportOrganize<CR>
 nnoremap <leader>jr :JavaRename<CR>
 nnoremap <leader>jf :JavaFormat<CR> " Formats java source code.
 nnoremap <leader>jx :Java<CR>
