@@ -5,8 +5,9 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="af-magic"
+ZSH_THEME="clean"
 # ZSH_THEME="ultrastructure"
+# ZSH_THEME="af-magic"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -59,22 +60,20 @@ source $ZSH/oh-my-zsh.sh
 HOMEBREWPATH="/usr/local/bin"
 
 # Set Java Home
-JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home"
-
-# Set Grails Home
-GRAILS_HOME_223=/opt/grails-2.2.3
-GRAILS_HOME_222=/opt/grails-2.2.2
-GRAILS_HOME=/opt/grails-2.4.0
+JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home"
 
 # Increase Maven heap
 JREBEL_HOME="/Users/mlopes/workspace/java/jrebel-nightly/lib"
 export MAVEN_OPTS="-Xmx1G -agentpath:$JREBEL_HOME/libjrebel64.dylib -Drebel.mustache_plugin=true -Drebel.log=true -XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC -XX:MaxPermSize=256m"
 
 # Setup path
-export PATH="$HOMEBREWPATH:/usr/bin:/bin:/usr/sbin:/sbin:$JAVA_HOME/bin:$GRAILS_HOME/bin:$GRAILS_HOME_222/bin:$GRAILS_HOME_223/bin"
+export PATH="$HOMEBREWPATH:/usr/bin:/bin:/usr/sbin:/sbin:$JAVA_HOME/bin"
 
 # Add my own bin
 export PATH="$PATH:$HOME/.bin"
+
+# Eclim
+export PATH="$PATH:/Applications/eclipse"
 
 # Man path
 export MANPATH="/usr/local/share/man:$MANPATH"

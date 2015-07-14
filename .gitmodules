@@ -55,3 +55,6 @@
 [submodule "vim/bundle/vimcolorssolarized"]
 	path = vim/bundle/vimcolorssolarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/bundle/vimcolorsjellybeans"]
+	path = vim/bundle/vimcolorsjellybeans
+	url = git@github.com:nanotech/jellybeans.vim.git
