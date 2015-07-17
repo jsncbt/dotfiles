@@ -63,8 +63,8 @@ HOMEBREWPATH="/usr/local/bin"
 JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home"
 
 # Increase Maven heap
-JREBEL_HOME="/Users/mlopes/workspace/java/jrebel-nightly/lib"
-export MAVEN_OPTS="-Xmx1G -agentpath:$JREBEL_HOME/libjrebel64.dylib -Drebel.mustache_plugin=true -Drebel.log=true -XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC -XX:MaxPermSize=256m"
+JREBEL_HOME="$HOME/dev/jrebel"
+export MAVEN_OPTS="-Xmx512m -javaagent:$JREBEL_HOME/jrebel.jar -Drebel.mustache_plugin=true -Drebel.log=true $MAVEN_OPTS"
 
 # Setup path
 export PATH="$HOMEBREWPATH:/usr/bin:/bin:/usr/sbin:/sbin:$JAVA_HOME/bin"

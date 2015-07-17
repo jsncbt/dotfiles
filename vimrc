@@ -2,6 +2,9 @@
 " http://amix.dk/vim/vimrc.html
 " https://github.com/jaysw/dotfiles/blob/master/vimrc
 
+" disable fuckin jsl
+let g:loaded_syntastic_javascript_jsl_checker = 1
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Basic Setup
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -25,6 +28,9 @@ set showcmd
 
 " allow registers to be used with clipboard
 set clipboard=unnamed
+
+" Stop creating swp files
+set noswapfile
 
 " Yank consistent with C D S
 nnoremap Y y$
