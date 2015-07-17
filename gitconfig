@@ -1,9 +1,9 @@
 [core]
-	excludesfile = /Users/mlopes/.gitignore
+	excludesfile = /Users/jcorbett/.gitignore
 	editor = /usr/bin/vim
 [user]
-	name = Marcos Antonio Lopes
-	email = mlopes@expedia.com
+	name = Jason Corbett
+	email = jcorbett@expedia.com
 [alias]
 	ci = commit
 	st = status
